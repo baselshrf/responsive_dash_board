@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/models/drawer_item_model.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
+import 'package:responsive_dash_board/widgets/active_and_inactive_item.dart';
+import 'package:responsive_dash_board/widgets/drawer_items_list_view.dart';
 import 'package:responsive_dash_board/widgets/user_info_list_tile.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -8,7 +11,7 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: const Color.fromRGBO(255, 255, 255, 1),
       child: const Column(
         children: [
           UserInfoListTile(
@@ -16,6 +19,23 @@ class CustomDrawer extends StatelessWidget {
             title: 'Lekan Okeowo',
             subtitle: 'demo@gmail.com',
           ),
+
+          Expanded(child: DrawerItemsListView()),
+
+          Expanded(child: SizedBox()),
+          InActiveDrawerItem(
+            drawerItemModel: DrawerItemModel(
+              title: 'Setting system',
+              image: Assets.imagesSettings,
+            ),
+          ),
+          InActiveDrawerItem(
+            drawerItemModel: DrawerItemModel(
+              title: 'Logout account',
+              image: Assets.imagesLogout,
+            ),
+          ),
+          SizedBox(height: 48),
         ],
       ),
     );

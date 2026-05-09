@@ -19,16 +19,7 @@ class UserInfoListTile extends StatelessWidget {
       elevation: 0,
       child: ListTile(
         leading: SvgPicture.asset(image),
-        title: Text(
-          title,
-          style: const TextStyle(
-            color: Color(0xFF064060),
-            fontSize: 16,
-            fontFamily: 'Montserrat',
-            fontWeight: FontWeight.w600,
-            height: 0,
-          ),
-        ),
+        title: Text(title, style: AppStyles.styleSemiBold16),
         subtitle: Text(subtitle, style: AppStyles.styleRegular12),
       ),
     );
