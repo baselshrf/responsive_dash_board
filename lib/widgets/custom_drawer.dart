@@ -17,6 +17,7 @@ class CustomDrawer extends StatelessWidget {
       subTitle: 'demo@gmail.com',
     );
     return Container(
+      width: MediaQuery.sizeOf(context).width * .7,
       color: const Color.fromRGBO(255, 255, 255, 1),
       child: CustomScrollView(
         slivers: [
