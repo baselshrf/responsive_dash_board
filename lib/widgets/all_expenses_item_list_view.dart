@@ -37,39 +37,43 @@ class _AllExpensessItemsListViewState extends State<AllExpensessItemsListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      // children: items.map((e) => AllExpensessItem(itemModel: e)).toList(),
-      children: items.asMap().entries.map((e) {
-        int index = e.key;
-        var item = e.value;
-        if (index == 1) {
-          return Expanded(
-            child: GestureDetector(
-              onTap: () {
-                updateIndex(index);
-              },
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
-                child: AllExpensessItem(
-                  isSelected: selectedIndex == index,
-                  itemModel: item,
-                ),
-              ),
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(0);
+            },
+            child: AllExpensessItem(
+              isSelected: selectedIndex == 0,
+              itemModel: items[0],
             ),
-          );
-        } else {
-          return Expanded(
-            child: GestureDetector(
-              onTap: () {
-                updateIndex(index);
-              },
-              child: AllExpensessItem(
-                isSelected: selectedIndex == index,
-                itemModel: item,
-              ),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(1);
+            },
+            child: AllExpensessItem(
+              isSelected: selectedIndex == 1,
+              itemModel: items[1],
             ),
-          );
-        }
-      }).toList(),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(2);
+            },
+            child: AllExpensessItem(
+              isSelected: selectedIndex == 2,
+              itemModel: items[2],
+            ),
+          ),
+        ),
+      ],
     );
   }
 
