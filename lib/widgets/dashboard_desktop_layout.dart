@@ -12,7 +12,7 @@ class DashboardDesktopLayout extends StatelessWidget {
       children: [
         Expanded(child: CustomDrawer()),
 
-        SizedBox(width: 32),
+        SizedBox(width: 24),
 
         Expanded(
           flex: 3,
@@ -24,7 +24,10 @@ class DashboardDesktopLayout extends StatelessWidget {
                   children: [
                     Expanded(
                       flex: 2,
-                      child: CustomAllExpensesAndQuickInvoice(),
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 40),
+                        child: CustomAllExpensesAndQuickInvoice(),
+                      ),
                     ),
 
                     SizedBox(width: 24),

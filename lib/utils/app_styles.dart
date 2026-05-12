@@ -71,6 +71,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/size_config.dart';
 
 abstract class AppStyles {
+  // ignore: strict_top_level_inference
   static TextStyle styleRegular16(context) {
     return TextStyle(
       color: const Color(0xFF064060),
@@ -165,6 +166,7 @@ abstract class AppStyles {
 // sacleFactor
 // responsive font size
 // (min , max) fontsize
+// ignore: strict_top_level_inference
 double getResponsiveFontSize(context, {required double fontSize}) {
   double scaleFactor = getScaleFactor(context);
   double responsiveFontSize = fontSize * scaleFactor;
@@ -175,6 +177,7 @@ double getResponsiveFontSize(context, {required double fontSize}) {
   return responsiveFontSize.clamp(lowerLimit, upperLimit);
 }
 
+// ignore: strict_top_level_inference
 double getScaleFactor(context) {
   // var dispatcher = PlatformDispatcher.instance;
   // var physicalWidth = dispatcher.views.first.physicalSize.width;

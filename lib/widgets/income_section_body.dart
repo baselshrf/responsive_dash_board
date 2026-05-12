@@ -12,8 +12,8 @@ class IncomSectionBody extends StatelessWidget {
     double width = MediaQuery.sizeOf(context).width;
 
     return width >= SizeConfig.desktop && width < 1750
-        ? const Expanded(
-            child: Padding(
+        ? Expanded(
+            child: const Padding(
               padding: EdgeInsets.all(16),
               child: DetailedIncomeChart(),
             ),

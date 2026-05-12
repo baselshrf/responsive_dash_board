@@ -9,10 +9,7 @@ class IncomeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomBackgroundContainer(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [IncomeSectionHeader(), IncomSectionBody()],
-      ),
+      child: Column(children: [IncomeSectionHeader(), IncomSectionBody()]),
     );
   }
 }
